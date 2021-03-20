@@ -31,13 +31,15 @@ router.get('/', async function (req, res, next) {
 router.get('/:songNo', async function (req, res, next) {
 
   console.log('req.params', req.params.songNo);
-  var songSourceNo = (Number(req.params.songNo) - 1).toString();
-  const selectedSong = path.resolve('assets/source/' + 'd' + songSourceNo + '.txt');
-  fs.readFile(selectedSong, 'utf8', (err, data) => {
-    if (err) throw err;
-    var songText = data.split('\n');
-    res.render('selected-song', { title: 'கீதங்களும் கீர்த்தனைகளும்', songLyrics: songText });
-  });
+  if (!isNaN(req.params.songNo)) {
+    var songSourceNo = (Number(req.params.songNo) - 1).toString();
+    const selectedSong = path.resolve('assets/source/' + 'd' + songSourceNo + '.txt');
+    fs.readFile(selectedSong, 'utf8', (err, data) => {
+      if (err) throw err;
+      var songText = data.split('\n');
+      res.render('selected-song', { title: 'கீதங்களும் கீர்த்தனைகளும்', songLyrics: songText });
+    });
+  }
 });
 
 module.exports = router;
