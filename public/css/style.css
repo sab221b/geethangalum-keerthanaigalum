@@ -4,10 +4,6 @@
   font-weight: normal;
   font-style: normal; }
 
-body {
-  height: 100vh;
-  font-family: Tamil Bible !important; }
-
 #role_selector select option {
   color: #333;
   position: relative;
@@ -116,3 +112,28 @@ a:hover {
 
 .list-style-none {
   list-style: none !important; }
+
+.tamil-font {
+  font-family: Tamil Bible !important; }
+
+button#search_icon {
+  position: absolute;
+  top: 2px;
+  right: 17px;
+  border-radius: .25rem;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+  padding-right: 6px;
+  height: 34px;
+  background-color: #c2c7cc; }
+
+.song-bg {
+  background-image: url("/img/song-bg.gif");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.list-bg {
+  background-image: url("/img/list-bg.gif");
+  background-repeat: no-repeat;
+  background-size: cover; }

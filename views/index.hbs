@@ -1,11 +1,30 @@
+<script src="/js/songs.js"></script>
+
 <div class="main-header bg-secondary">
     <h1 class="h1 text-white mb-0 w-100">{{title}}</h1>
 </div>
-<div class="p-4 py-5 mt-5">
-    <table class="table">
+<div class="p-4 py-5 mt-5 list-bg">
+    <div class="row w-100 mx-0 align-items-start mt-4 mb-4">
+        <div id="role_selector" class="col-12 col-sm-6 col-md-4">
+            <select onchange="sortBy(value)" class="text-dark form-control input-lg">
+                <option selected="true" disabled="true" value="">வரிசைப்படுத்து</option>
+                <option value="songNo">பாடல் எண் மூலம்</option>
+                <option value="songName">பாடல் பெயர் மூலம்</option>
+            </select>
+            <i class="text-dark fas fa-caret-down"></i>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mt-3 mt-sm-0 mt-md-0 position-relative">
+            <input type="text" class="form-control" placeholder="பாடல் எண்" name="" id="song_number">
+            <button onclick="goToSong()" class="btn" id="search_icon">
+                <i class="text-dark fas fa-search"></i>
+            </button>
+            <p id="error_song_number" class="px-1 text-danger d-none"></p>
+        </div>
+    </div>
+    <table class="table tamil-font">
         <thead>
             <tr class="h5">
-                <th scope="col">வரிசை எண்</th>
                 <th scope="col">பாடல்</th>
                 <th class="text-center" scope="col">பாடல் என்</th>
             </tr>
@@ -13,7 +32,6 @@
         <tbody>
             {{#each songList}}
             <tr class="h5">
-                <th scope="row">{{ @index}}</th>
                 <td> <a class="text-decoration-none" href="{{this.songNo}}">{{this.name}}</a></td>
                 <td class="text-center">{{this.songNo}}</td>
             </tr>
