@@ -131,7 +131,8 @@ button#search_icon {
 .song-bg {
   background-image: url("/img/song-bg1.gif");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  height: 100vh; }
 
 .list-bg {
   background-image: url("/img/list-bg.gif");
