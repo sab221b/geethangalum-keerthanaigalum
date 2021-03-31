@@ -167,11 +167,54 @@ button#search_icon {
   background-image: url("/img/song-bg1.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  height: auto;
+  min-height: calc(100% - 70px);
 }
 
 .list-bg {
   background-image: url("/img/list-bg.gif");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.rangeslider__fill {
+  background: #838c93 !important;
+  position: absolute;
+}
+
+.rangeslider__ruler {
+  cursor: pointer;
+  font-size: 0.7em;
+  margin: 15px 0px 0 -1px;
+  top: 100%;
+  text-align: justify;
+  position: absolute !important;
+  width: 100% !important;
+  top: -40px !important;
+}
+
+// .rangeslider--horizontal {
+//   height: 20px;
+//   width: 100%;
+//   margin-bottom: 25px;
+// }
+
+.rangeslider__ruler:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.rangeslider--horizontal .rangeslider__handle {
+  top: -3px !important;
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+}
+
+.rangeslider__handle {
+  width: 25px !important;
+  height: 25px !important;
 }

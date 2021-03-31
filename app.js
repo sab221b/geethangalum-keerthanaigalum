@@ -7,16 +7,10 @@ var app = express();
 var cors = require('cors');
 app.use(cors());
 var pageRouter = require('./routes/pages_routes');
-var Handlebars = require('handlebars');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
-Handlebars.registerHelper("inc", function(value, options)
-{
-    return parseInt(value) + 1;
-});
 
 app.use(logger('dev'));
 app.use(express.json());
