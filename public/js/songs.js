@@ -3,6 +3,8 @@ $(document).ready(function () {
     setFontSize(1);
     var $r = $('input[type="range"]');
     var $ruler = $('<div class="rangeslider__ruler" />');
+    if (!isNaN(window.location.pathname.replace('/', '')))
+        $('input#song_number').attr("placeholder", "பாடல் எண்: " + window.location.pathname.replace('/', ''));
 
     // Initialize
     $r.rangeslider({
