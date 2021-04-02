@@ -170,3 +170,6 @@ button#search_icon {
 .rangeslider__handle {
   width: 25px !important;
   height: 25px !important; }
+
+.overflow-auto {
+  overflow: auto !important; }
