@@ -37,7 +37,7 @@ function sortBy(value) {
 
 function goToSong() {
     var songInput = $('input#song_number').val();
-    if (isNaN(songInput) || Number(songInput) <= 0 || Number(songInput) > 710) {
+    if (isNaN(songInput) || Number(songInput) <= 0 || Number(songInput) > 720) {
         $('p#error_song_number').removeClass('d-none').text('invalid number')
         return
     }
