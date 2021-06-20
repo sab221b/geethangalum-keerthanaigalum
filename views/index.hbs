@@ -16,11 +16,13 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-3 mt-3 mt-sm-0 mt-md-0 position-relative">
-            <input type="text" class="form-control" placeholder="பாடல் எண்" name="" id="song_number">
-            <button onclick="goToSong()" class="btn" id="search_icon">
-                <i class="text-dark fas fa-search"></i>
-            </button>
-            <p id="error_song_number" class="px-1 text-danger d-none"></p>
+            <form onsubmit="goToSong()">
+                <input type="text" class="form-control" placeholder="பாடல் எண்" name="" id="song_number">
+                <button onclick="goToSong()" class="btn" id="search_icon">
+                    <i class="text-dark fas fa-search"></i>
+                </button>
+                <p id="error_song_number" class="px-1 text-danger d-none"></p>
+            </form>
         </div>
 
         <div class="col-12 col-sm-6 col-md-5 mt-5 mt-sm-5 mt-md-0 align-self-center">

@@ -115,6 +115,9 @@ a:hover {
   color: #148e05 !important;
   text-decoration: none !important; }
 
+.fs-1pt5 {
+  font-size: 1.5em; }
+
 .list-style-none {
   list-style: none !important; }
 
