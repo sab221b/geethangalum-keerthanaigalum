@@ -1,6 +1,7 @@
 $(document).ready(function () {
     console.log("ready!");
-    setFontSize(1);
+    var defautFontsize = 1.5;
+    setFontSize(defautFontsize);
     var $r = $('input[type="range"]');
     var $ruler = $('<div class="rangeslider__ruler" />');
     if (!isNaN(window.location.pathname.replace('/', '')))
