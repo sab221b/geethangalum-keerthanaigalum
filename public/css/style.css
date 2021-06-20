@@ -52,7 +52,6 @@ input[type="number"] {
   height: 70px;
   display: flex;
   align-items: center;
-  padding: 0.5rem 0.7rem;
   z-index: 1200; }
 
 .spinner-overlay {
@@ -106,9 +105,18 @@ input[type="number"] {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 
+a {
+  color: #0654a9 !important;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
 a:hover {
-  color: #0056b3;
+  color: #148e05 !important;
   text-decoration: none !important; }
+
+.fs-1pt5 {
+  font-size: 1.5em; }
 
 .list-style-none {
   list-style: none !important; }
@@ -129,7 +137,7 @@ button#search_icon {
   background-color: #c2c7cc; }
 
 .song-bg {
-  background-image: url("/img/song-bg1.gif");
+  background-image: url(http://www.tamil-bible.com/Bible/Bg/tex06.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -139,7 +147,7 @@ button#search_icon {
   min-height: calc(100% - 70px); }
 
 .list-bg {
-  background-image: url("/img/list-bg.gif");
+  background-image: url(http://www.tamil-bible.com/Bible/Bg/tex06.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
 

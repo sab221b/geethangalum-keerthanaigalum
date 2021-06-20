@@ -1,6 +1,7 @@
 $(document).ready(function () {
     console.log("ready!");
-    setFontSize(1);
+    var defautFontsize = 1.5;
+    setFontSize(defautFontsize);
     var $r = $('input[type="range"]');
     var $ruler = $('<div class="rangeslider__ruler" />');
     if (!isNaN(window.location.pathname.replace('/', '')))
@@ -36,6 +37,7 @@ function sortBy(value) {
 }
 
 function goToSong() {
+    event.preventDefault();
     var songInput = $('input#song_number').val();
     if (isNaN(songInput) || Number(songInput) <= 0 || Number(songInput) > 720) {
         $('p#error_song_number').removeClass('d-none').text('invalid number')
