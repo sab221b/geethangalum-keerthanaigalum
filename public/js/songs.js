@@ -1,6 +1,11 @@
 $(document).ready(function () {
     console.log("ready!");
     var defautFontsize = 1.5;
+    $('#set_font').val(1.5)
+    if(window.screen.width < 576) {
+        defautFontsize = 1; 
+        $('#set_font').val(1)
+    }
     setFontSize(defautFontsize);
     var $r = $('input[type="range"]');
     var $ruler = $('<div class="rangeslider__ruler" />');
