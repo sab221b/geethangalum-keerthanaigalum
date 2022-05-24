@@ -45,7 +45,6 @@ input[type="number"] {
   max-height: 50px; }
 
 .main-header {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
