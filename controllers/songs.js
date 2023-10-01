@@ -1,6 +1,8 @@
 var path = require('path');
 const songsIndex = path.resolve('assets/source/sortlist.txt')
 const fs = require('fs');
+const { createWorker } = require('tesseract.js');
+
 
 exports.listSongs = (req, res) => {
     fs.readFile(songsIndex, 'utf8', (err, data) => {
@@ -28,12 +30,33 @@ exports.listSongs = (req, res) => {
 exports.getSongbyNumber = (req, res) => {
     console.log('req.params', req.params.songNo);
     if (!isNaN(req.params.songNo)) {
-        var songSourceNo = (Number(req.params.songNo) - 1).toString();
-        const selectedSong = path.resolve('assets/source/' + 'd' + songSourceNo + '.txt');
+        var songSourceNo = (Number(req.params.songNo)).toString();
+        const selectedSong = path.resolve('assets/new-source/' + songSourceNo + '.txt');
         fs.readFile(selectedSong, 'utf8', (err, data) => {
             if (err) throw err;
             var songText = data.split('\n');
             res.render('selected-song', { title: 'கீதங்களும் கீர்த்தனைகளும்', songLyrics: songText });
         });
     }
+}
+
+exports.ImagetoTextOCR = async (req, res) => {
+    const worker = await createWorker('tam');
+    const folderPath = 'assets/image-canvases';
+    fs.readdir(folderPath, async (error, files) => {
+        if (error) {
+            console.log(error);
+        } else {
+            for (let i = 0; i < files.length; i++) {
+                if (i === files.length) {
+                    await worker.terminate();
+                    break;
+                }
+                const fileName = files[i]
+                const canvasImg = path.resolve(`assets/image-canvases/${fileName}`)
+                const { data: { text } } = await worker.recognize(canvasImg);
+                fs.writeFileSync(`assets/new-source/${fileName.replace(".png", ".txt")}`, text);
+            }
+        }
+    });
 }

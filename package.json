@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "compile:sass": "node-sass public/scss/style.scss public/css/style.css -w",
-    "start": "concurrently \"npm run compile:sass\" \"node ./bin/www\""
+    "start": "concurrently \"npm run compile:sass\" \"nodemon ./bin/www\""
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -22,7 +22,7 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "node-sass": "^6.0.1",
-    "nodemon": "^2.0.6"
-  },
-  "devDependencies": {}
+    "nodemon": "^2.0.6",
+    "tesseract.js": "^5.0.0"
+  }
 }
