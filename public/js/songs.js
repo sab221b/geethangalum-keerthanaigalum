@@ -1,10 +1,10 @@
 $(document).ready(function () {
     console.log("ready!");
     var defautFontsize = 1.5;
-    $('#set_font').val(1.5)
+    $('#set_font').val(defautFontsize)
     if(window.screen.width < 576) {
         defautFontsize = 1; 
-        $('#set_font').val(1)
+        $('#set_font').val(defautFontsize)
     }
     setFontSize(defautFontsize);
     var $r = $('input[type="range"]');
@@ -52,7 +52,7 @@ function goToSong() {
 }
 
 function setFontSize(fontSize) {
-    $('table thead tr th').css({ fontSize: fontSize + 'rem' });
-    $('table tbody tr td').css({ fontSize: fontSize + 'rem' });
-    $('ul.tamil-font li').css({ fontSize: fontSize + 'rem' });
+    $('table thead tr th').css({ fontSize: fontSize + 'rem', lineHeight: Number(fontSize) * 1.5 + 'rem' });
+    $('table tbody tr td').css({ fontSize: fontSize + 'rem', lineHeight: Number(fontSize) * 1.5 + 'rem' });
+    $('ul.tamil-font li').css({ fontSize: fontSize + 'rem', lineHeight: Number(fontSize) * 1.5 + 'rem' });
 }
