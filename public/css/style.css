@@ -2,12 +2,13 @@
   font-family: "Tamil Bible";
   src: url("/fonts/tamil.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
-
+  font-style: normal;
+}
 #role_selector select option {
   color: #333;
   position: relative;
-  top: 5px; }
+  top: 5px;
+}
 
 /*==================================================
  remove the original arrow in select option dropdown
@@ -16,11 +17,13 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
-  appearance: none; }
+  appearance: none;
+}
 
 select.input-lg {
   height: 38px !important;
-  line-height: 25px !important; }
+  line-height: 25px !important;
+}
 
 select + i.fas {
   float: right;
@@ -28,21 +31,25 @@ select + i.fas {
   margin-right: 8px;
   pointer-events: none;
   background-color: #fff;
-  padding-right: 5px; }
+  padding-right: 5px;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0; }
+  margin: 0;
+}
 
 /* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield; }
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 .input-otp {
   max-width: 50px;
-  max-height: 50px; }
+  max-height: 50px;
+}
 
 .main-header {
   top: 0;
@@ -51,7 +58,8 @@ input[type="number"] {
   height: 70px;
   display: flex;
   align-items: center;
-  z-index: 1200; }
+  z-index: 1200;
+}
 
 .spinner-overlay {
   position: fixed;
@@ -63,11 +71,13 @@ input[type="number"] {
   display: flex;
   z-index: 9999;
   align-items: center;
-  background: rgba(255, 255, 255, 0.5); }
+  background: rgba(255, 255, 255, 0.5);
+}
 
 .spinner {
   margin: 0px auto;
-  text-align: center; }
+  text-align: center;
+}
 
 .spinner > div {
   width: 18px;
@@ -76,64 +86,73 @@ input[type="number"] {
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
 
 .spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s; }
+  animation-delay: -0.32s;
+}
 
 .spinner .bounce2 {
   -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s; }
+  animation-delay: -0.16s;
+}
 
 @-webkit-keyframes sk-bouncedelay {
-  0%,
-  80%,
-  100% {
-    -webkit-transform: scale(0); }
-  40% {
-    -webkit-transform: scale(1); } }
-
-@keyframes sk-bouncedelay {
-  0%,
-  80%,
-  100% {
+  0%, 80%, 100% {
     -webkit-transform: scale(0);
-    transform: scale(0); }
+  }
   40% {
     -webkit-transform: scale(1);
-    transform: scale(1); } }
-
+  }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 a {
   color: #0654a9 !important;
   text-decoration: none;
   background-color: transparent;
-  -webkit-text-decoration-skip: objects; }
+  -webkit-text-decoration-skip: objects;
+}
 
 a:hover {
   color: #148e05 !important;
-  text-decoration: none !important; }
+  text-decoration: none !important;
+}
 
 .fs-1pt5 {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 .list-style-none {
-  list-style: none !important; }
+  list-style: none !important;
+}
 
 .tamil-font {
-  font-family: Tamil Bible !important; }
+  font-family: Tamil Bible !important;
+}
 
 button#search_icon {
   position: absolute;
   top: 2px;
   right: 17px;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   display: flex;
   align-items: center;
   padding-left: 6px;
   padding-right: 6px;
   height: 34px;
-  background-color: #c2c7cc; }
+  background-color: #c2c7cc;
+}
 
 .song-bg {
   background-image: url(http://www.tamil-bible.com/Bible/Bg/tex06.jpg);
@@ -143,16 +162,19 @@ button#search_icon {
   width: 100%;
   top: 70px;
   height: auto;
-  min-height: calc(100% - 70px); }
+  min-height: calc(100% - 70px);
+}
 
 .list-bg {
   background-image: url(http://www.tamil-bible.com/Bible/Bg/tex06.jpg);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .rangeslider__fill {
   background: #838c93 !important;
-  position: absolute; }
+  position: absolute;
+}
 
 .rangeslider__ruler {
   cursor: pointer;
@@ -162,21 +184,28 @@ button#search_icon {
   text-align: justify;
   position: absolute !important;
   width: 100% !important;
-  top: -40px !important; }
+  top: -40px !important;
+}
 
 .rangeslider__ruler:after {
   content: "";
   display: inline-block;
-  width: 100%; }
+  width: 100%;
+}
 
 .rangeslider--horizontal .rangeslider__handle {
   top: -3px !important;
   touch-action: pan-y;
-  -ms-touch-action: pan-y; }
+  -ms-touch-action: pan-y;
+}
 
 .rangeslider__handle {
   width: 25px !important;
-  height: 25px !important; }
+  height: 25px !important;
+}
 
 .overflow-auto {
-  overflow: auto !important; }
+  overflow: auto !important;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass public/scss/style.scss public/css/style.css -w",
-    "start": "concurrently \"npm run compile:sass\" \"node ./bin/www\""
+    "start": "node ./bin/www"
   },
   "author": "sab221b@gmail.com",
   "license": "ISC",
