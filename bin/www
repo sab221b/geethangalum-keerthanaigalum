@@ -4,23 +4,34 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('geethangalum-keerthanaigalum');
-var http = require('http');
+const app = require('../index');
+const debug = require('debug')('geethangalum-keerthanaigalum');
+const http = require('http');
+const fs = require('fs');
 
 /**
  * Get port from environment and store in Express.
  */
 const dotenv = require('dotenv');
 dotenv.config();
-var port = normalizePort(process.env.PORT || '8081');
+const port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+// const server = https.createServer(
+//   // Provide the private and public key to the server by reading each
+//   // file's content with the readFileSync() method.
+//   {
+//     key: fs.readFileSync('key.pem'),
+//     cert: fs.readFileSync('cert.pem'),
+//   },
+//   app
+// );
+const server = http.createServer(app);
+
 
 /**
  * Listen on provided port, on all network interfaces.
